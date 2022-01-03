@@ -9,8 +9,11 @@ export BERT_VOCAB=https://ai2-s2-research.s3-us-west-2.amazonaws.com/scibert/all
 export BERT_WEIGHTS=https://ai2-s2-research.s3-us-west-2.amazonaws.com/scibert/allennlp_files/scibert_scivocab_uncased.tar.gz
 
 # path to dataset files
-export TRAIN_PATH=data/CSAbstruct/train.jsonl
-export DEV_PATH=data/CSAbstruct/dev.jsonl
+#export TRAIN_PATH=data/CSAbstruct/train.jsonl
+#export DEV_PATH=data/CSAbstruct/dev.jsonl
+
+export TRAIN_PATH=data/my_data/conflated_ds_train.jsonl
+export DEV_PATH=data/my_data/conflated_ds_val.jsonl
 export TEST_PATH=data/CSAbstruct/test.jsonl
 
 # model
