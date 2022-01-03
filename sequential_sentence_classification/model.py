@@ -96,7 +96,8 @@ class SeqClassificationModel(Model):
         # embedded_sentences: batch_size, num_sentences, sentence_length, embedding_size
         embedded_sentences = self.text_field_embedder(sentences)
         mask = get_text_field_mask(sentences, num_wrapping_dims=1).float()
-        batch_size, num_sentences, _, _ = embedded_sentences.size()
+       
+        batch_size, num_sentences, _, _ = embedded_sentences.size()       
 
         if self.use_sep:
             # The following code collects vectors of the SEP tokens from all the examples in the batch,
@@ -107,6 +108,8 @@ class SeqClassificationModel(Model):
                                                                         # returns num_sentences_per_batch x vector_len
             assert embedded_sentences.dim() == 2
             num_sentences = embedded_sentences.shape[0]
+            print("num_sents: ", num_sentences)
+
             # for the rest of the code in this model to work, think of the data we have as one example
             # with so many sentences and a batch of size 1
             batch_size = 1

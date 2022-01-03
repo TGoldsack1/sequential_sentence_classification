@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export SEED=15270 #1 , 2
+export SEED=2 # 15270, 1 , 2
 export PYTORCH_SEED=`expr $SEED / 10`
 export NUMPY_SEED=`expr $PYTORCH_SEED / 10`
 
@@ -14,7 +14,7 @@ export BERT_WEIGHTS=https://ai2-s2-research.s3-us-west-2.amazonaws.com/scibert/a
 
 export TRAIN_PATH=data/my_data/conflated_ds_train.jsonl
 export DEV_PATH=data/my_data/conflated_ds_val.jsonl
-export TEST_PATH=data/CSAbstruct/test.jsonl
+export TEST_PATH=data/my_data/conflated_CSAbstruct_test.jsonl
 
 # model
 export USE_SEP=true  # true for our model. false for baseline

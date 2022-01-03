@@ -143,7 +143,7 @@ class SeqClassificationReader(DatasetReader):
             return [(sentences, labels, confidences, additional_features)]
 
     def is_bad_sentence(self, sentence: str):
-        if len(sentence) > 10 and len(sentence) < 600:
+        if len(sentence) > 10 and len(sentence) < 1000:#600:
             return False
         else:
             return True
@@ -180,7 +180,7 @@ class SeqClassificationReader(DatasetReader):
                          confidences: List[float] = None,
                          additional_features: List[float] = None,
                          ) -> Instance:
-        if not self.predict:
+        if not self.predict and labels is not None:
             assert len(sentences) == len(labels)
         if confidences is not None:
             assert len(sentences) == len(confidences)
