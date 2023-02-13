@@ -12,9 +12,13 @@ export BERT_WEIGHTS=https://ai2-s2-research.s3-us-west-2.amazonaws.com/scibert/a
 #export TRAIN_PATH=data/CSAbstruct/train.jsonl
 #export DEV_PATH=data/CSAbstruct/dev.jsonl
 
-export TRAIN_PATH=data/my_data/conflated_ds_train.jsonl
-export DEV_PATH=data/my_data/conflated_ds_val.jsonl
-export TEST_PATH=data/my_data/conflated_CSAbstruct_test.jsonl
+#export TRAIN_PATH=data/my_data/conflated_ds_train.jsonl
+#export DEV_PATH=data/my_data/conflated_ds_val.jsonl
+#export TEST_PATH=data/my_data/conflated_CSAbstruct_test.jsonl
+
+export TRAIN_PATH=data/pubmed-rtc/train.jsonl
+export DEV_PATH=data/pubmed-rtc/dev.jsonl
+export TEST_PATH=data/pubmed-rtc/test.jsonl
 
 # model
 export USE_SEP=true  # true for our model. false for baseline
@@ -29,7 +33,7 @@ export NUM_EPOCHS=2
 
 # limit number of sentneces per examples, and number of words per sentence. This is dataset dependant
 export MAX_SENT_PER_EXAMPLE=10
-export SENT_MAX_LEN=80
+export SENT_MAX_LEN=100
 
 # this is for the evaluation of the summarization dataset
 export SCI_SUM=false
